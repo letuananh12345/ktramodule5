@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Xóa Book</h1>
+
+  <form [formGroup]="bookForm">
+    <div class="form-group">
+      <input type="hidden" class="form-control" formControlName="id" readonly>
+    </div>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" formControlName="title">
+    </div>
+    <div class="form-group">
+      <label>Author:</label>
+      <input type="text" class="form-control" formControlName="author">
+    </div>
+    <div class="form-group">
+      <label>Description:</label>
+      <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div class="modal-footer">
+  <button type="submit" (click)="deleteBook(bookForm.value.id)" class="btn btn-primary">Xóa</button>
+
+
+    <input type="button" routerLink="/book" class="btn btn-primary" value="Quay lại">
+    </div>
+  </form>
+</div>
+

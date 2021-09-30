@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Thêm Mới Sách</h1>
+
+  <form [formGroup]="bookForm">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" formControlName="title" placeholder="nhập tên sách">
+    </div>
+    <div class="form-group">
+      <label>Author:</label>
+      <input type="text" class="form-control" formControlName="author" placeholder="nhập tác giả">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" formControlName="description" placeholder="nhập mô tả">
+    </div>
+
+
+    <button type="submit" (click)="createProduct()" class="btn btn-primary">Thêm Mới</button>
+  </form>
+</div>
